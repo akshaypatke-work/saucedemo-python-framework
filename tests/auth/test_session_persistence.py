@@ -11,5 +11,6 @@ def test_session_persistence_after_refresh(authenticated_page):
 @pytest.mark.regression
 def test_session_persistence_direct_url(authenticated_page):
     page = authenticated_page
-    page.goto("/inventory.html")
+    page.goto("https://www.saucedemo.com/inventory.html")
+
     assert "inventory" in page.url
