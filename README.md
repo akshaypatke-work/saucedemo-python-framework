@@ -10,6 +10,7 @@ The framework is designed with scalability, maintainability, and CI-readiness in
 
 ## Tech Stack
 
+mkdir docs
 - Python
 - Playwright
 - Pytest
@@ -184,6 +185,13 @@ GitHub Actions pipeline automatically:
 - Test data factory implementation
 
 ---
+
+## Documentation
+
+Detailed framework documentation is available here:
+
+[Download Framework Documentation](docs/SauceDemo_Automation_Framework_Documentation.pdf)
+
 
 ## Author
 
