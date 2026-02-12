@@ -165,15 +165,6 @@ reports/report.html
 
 ---
 
-## Reports
-
-After execution, HTML report is generated at:
-
-reports/report.html
-
-
----
-
 ## CI/CD
 
 GitHub Actions pipeline automatically:
