@@ -143,6 +143,26 @@ pytest --html=reports/report.html --self-contained-html
 pytest -x
 
 
+## Reports
+HTML report is generated after test execution.
+
+
+## generate html report
+pytest --html=reports/report.html --self-contained-html
+
+
+## open report (Mac)
+open reports/report.html
+
+
+## run tests and open report automatically
+pytest --html=reports/report.html --self-contained-html && open reports/report.html
+
+
+## Report location:
+reports/report.html
+
+
 ---
 
 ## Reports
