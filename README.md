@@ -1,8 +1,8 @@
-# SauceDemo Playwright Automation Framework (Python)
+# SauceDemo End-to-End Automation Framework (Playwright + Pytest)
 
 ## Overview
 
-This project is an end-to-end UI automation framework built using **Playwright + Pytest** to test the SauceDemo application.
+This project is a comprehensive end-to-end UI automation framework developed using Playwright and Pytest to validate the SauceDemo application. It reflects production-grade automation architecture with a strong focus on scalability, maintainability, and CI/CD readiness.
 
 The framework is designed with scalability, maintainability, and CI-readiness in mind. It follows the **Page Object Model (POM)** design pattern and supports structured test execution using markers.
 
@@ -10,7 +10,6 @@ The framework is designed with scalability, maintainability, and CI-readiness in
 
 ## Tech Stack
 
-mkdir docs
 - Python
 - Playwright
 - Pytest
@@ -40,6 +39,18 @@ saucedemo-python-framework/
 ├── requirements.txt # Dependencies
 └── README.md
 
+
+---
+
+
+## Helpers Layer
+
+The helpers/ directory centralizes reusable components:
+
+- test_data.py → Stores credentials and static test values
+- utils.py → Contains reusable utility functions
+
+This avoids hardcoded values inside test files and improves maintainability.
 
 ---
 
@@ -103,6 +114,27 @@ pytest -m api
 pytest -m visual
 
 
+## Performance Testing (Lighthouse)
+This framework includes Lighthouse integration for frontend performance auditing.
+
+
+## Run Lighthouse Audit
+lighthouse https://www.saucedemo.com \
+  --output html \
+  --output-path reports/lighthouse-report.html \
+  --chrome-flags="--headless"
+
+
+## Open Lighthouse Report
+open reports/lighthouse-report.html
+
+## Lighthouse evaluates:
+- Performance
+- Accessibility
+- Best Practices
+- SEO
+
+
 ## execute specific test file
 pytest tests/auth/test_login.py
 
@@ -136,7 +168,7 @@ pytest --reruns 0
 
 
 ## generate html report manually
-pytest --html=reports/report.html --self-contained-html
+pytest --html=reports/test-report.html --self-contained-html
 
 
 ## execute and stop on first failure
@@ -148,19 +180,19 @@ HTML report is generated after test execution.
 
 
 ## generate html report
-pytest --html=reports/report.html --self-contained-html
+pytest --html=reports/test-report.html --self-contained-html
 
 
 ## open report (Mac)
-open reports/report.html
+open reports/test-report.html
 
 
 ## run tests and open report automatically
-pytest --html=reports/report.html --self-contained-html && open reports/report.html
+pytest --html=reports/test-report.html --self-contained-html && open reports/test-report.html
 
 
 ## Report location:
-reports/report.html
+reports/test-report.html
 
 
 ---
@@ -207,4 +239,4 @@ Detailed framework documentation is available here:
 ## Author
 
 Akshay Patke  
-Automation Test Engineer
+Software Test Engineer
