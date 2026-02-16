@@ -85,8 +85,25 @@ source venv/bin/activate
 pip install -r requirements.txt
 playwright install
 
+---
+
+## Run Tests Using Docker
+
+### Build Docker Image
+
+docker build -t saucedemo-tests .
+
+### Run Tests Inside Container
+
+docker run --rm saucedemo-tests
+
+### Generate HTML Report From Docker
+
+docker run --rm -v $(pwd)/reports:/app/reports saucedemo-tests pytest --html=reports/test-report.html --self-contained-html
+
 
 ---
+
 
 ## Running Tests
 
